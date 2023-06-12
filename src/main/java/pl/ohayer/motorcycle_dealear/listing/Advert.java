@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Entity
 @Getter
@@ -21,6 +22,7 @@ public class Advert {
     private String model;
     private long mileage;
     private int produce_year;
+    private BigDecimal price;
 
     public Advert(String brand, String model, long mileage, int produce_year) {
         this.brand = brand;
