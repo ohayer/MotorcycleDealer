@@ -14,9 +14,10 @@ public class MotoController {
     public MotoController(MotoRepository motoRepository) {
         this.motoRepository = motoRepository;
     }
+
     @GetMapping("/add")
-    public void add(){
-        Advert advert = new Advert("Suzuki","Sv650",16000,2008);
+    public void add() {
+        Advert advert = new Advert("Suzuki", "Sv650", 16000, 2008);
         motoRepository.save(advert);
     }
 
@@ -24,9 +25,20 @@ public class MotoController {
     public List<Advert> getAdvert() {
         return motoRepository.findAll();
     }
+
     @PostMapping("")
     public Advert addAdvert(@RequestBody Advert advert) {
-       return motoRepository.save(advert);
+        return motoRepository.save(advert);
     }
 
+    @DeleteMapping("/{id}")
+    public boolean deleteAdvert(@PathVariable Long id) {
+        motoRepository.deleteById(id);
+        return true;
+    }
+
+    @PutMapping("")
+    public Advert putAdvert(@RequestBody Advert advert) {
+        return motoRepository.saveAndFlush(advert);
+    }
 }

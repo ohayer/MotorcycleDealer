@@ -11,21 +11,22 @@
 <div class="main-horiz">
     <h1 style="padding-top: 15px;text-align: center; color: #cad2e0; font-size: 45px">MOTO-DEALER</h1>
     <div style="display: flex; justify-content: space-between; color: #cad2e0;">
-    <h3  style="text-align: right; padding-left: 40px">We are working with passions to motorcycles</h3>
-    <h3 style=" text-align: right;padding-right: 40px; ">Found that what you are looking for</h3>
+        <h3 style="text-align: right; padding-left: 40px">We are working with passions to motorcycles</h3>
+        <h3 style=" text-align: right;padding-right: 40px; ">Found that what you are looking for</h3>
     </div>
 </div>
 <img style="width: 100%; height: 70%; margin: auto; display: block" src="/shops.jpg">
 
 <div class="container">
     <c:forEach items="${adverts}" var="advert">
-    <div class="item" >
-        <a href="http://localhost:8080/brand=${advert.brand}&model=${advert.model}&mileage=${advert.mileage}">
-        <h3 >${advert.brand} ${advert.model}</h3>
-        <p>mileage :${advert.mileage} km</p>
-        <p>produce year :${advert.produce_year}</p>
-        <p>Price ${advert.price}PLN</p>
-        </a>
+        <div class="item">
+            <a href="http://localhost:8080/brand=${advert.brand}&model=${advert.model}&mileage=${advert.mileage}">
+                <img src="${file}" alt="${file}" style="width: 500px; height: 200px;">
+                <h3>${advert.brand} ${advert.model}</h3>
+                <p>mileage :${advert.mileage} km</p>
+                <p>produce year :${advert.produce_year}</p>
+                <p>Price ${advert.price}PLN</p>
+            </a>
         </div>
     </c:forEach>
 </div>
