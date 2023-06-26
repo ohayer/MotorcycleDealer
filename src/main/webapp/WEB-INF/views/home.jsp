@@ -30,11 +30,12 @@
         </div>
     </c:forEach>
 </div>
-<div class="contact">
-    <h4>Contact us: </h4>
+<footer>
+    <p>&copy; 2023 MotoSprzedaż</p>
+    <h3>Contact us: </h3>
     <p>email: example@example.ex,</p>
     <p>Phone numer (+48) 111 111 111,</p>
     <p>Localization: Warsaw, street: Flower 10 , 355-321</p>
-</div>
+</footer>
 </body>
 </html>
