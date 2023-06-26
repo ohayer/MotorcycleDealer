@@ -26,7 +26,7 @@ public class PhotoService {
         }
     }
 
-    public List<File> getPhotosById(Long id) {
+    public List<File> getPhotosById(long id) {
         String folder = "C:\\projectCar\\";
         File[] files = new File(folder).listFiles();
         List<File> matchingPhotos = new ArrayList<>();
@@ -41,9 +41,23 @@ public class PhotoService {
         return matchingPhotos;
     }
 
-    public String returnImage() throws IOException {
+    public String returnImage(long id) throws IOException {
         String folder = "C:\\projectCar\\";
-        File file = new File(folder, "1#1.jpg");
+        StringBuilder sb = new StringBuilder(String.valueOf(id));
+        sb.append("#1.jpg");
+        File file = new File(folder, sb.toString());
+        if (file == null) {
+            sb = new StringBuilder(id + "#1.png");
+            file = new File(folder, sb.toString());
+        }
+        byte[] imageBytes = Files.readAllBytes(Paths.get(file.getPath()));
+        String encodedImage = Base64.getEncoder().encodeToString(imageBytes);
+        return "data:image/jpeg;base64," + encodedImage;
+    }
+
+    public String returnImage(String name) throws IOException {
+        String folder = "C:\\projectCar\\";
+        File file = new File(folder, name);
         byte[] imageBytes = Files.readAllBytes(Paths.get(file.getPath()));
         String encodedImage = Base64.getEncoder().encodeToString(imageBytes);
         return "data:image/jpeg;base64," + encodedImage;

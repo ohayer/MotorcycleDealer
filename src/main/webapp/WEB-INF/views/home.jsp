@@ -15,13 +15,17 @@
         <h3 style=" text-align: right;padding-right: 40px; ">Found that what you are looking for</h3>
     </div>
 </div>
-<img style="width: 100%; height: 70%; margin: auto; display: block" src="/shops.jpg">
+<img style="display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;" src="/shops.jpg">
 
 <div class="container">
     <c:forEach items="${adverts}" var="advert">
         <div class="item">
             <a href="http://localhost:8080/brand=${advert.brand}&model=${advert.model}&mileage=${advert.mileage}">
-                <img src="${file}" alt="${file}" style="width: 500px; height: 200px;">
+                <img src="${file.returnImage(advert.id)}" alt="${file}">
                 <h3>${advert.brand} ${advert.model}</h3>
                 <p>mileage :${advert.mileage} km</p>
                 <p>produce year :${advert.produce_year}</p>

@@ -24,7 +24,7 @@ public class ProductController {
                              Model models) throws IOException {
         Advert advert = motoRepository.getAdvertByBrandAndModelAndMileage(brand, model, mileage);
         models.addAttribute("advert",advert);
-        models.addAttribute("file",photoService.returnImage());
+        models.addAttribute("file",photoService);
         return "product";
     }
 }

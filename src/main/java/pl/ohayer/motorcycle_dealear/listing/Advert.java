@@ -25,6 +25,9 @@ public class Advert {
     private long mileage;
     private int produce_year;
     private BigDecimal price;
+    private int engineSize;
+    private boolean abs;
+    private String description;
 
     public Advert(String brand, String model, long mileage, int produce_year) {
         this.brand = brand;

@@ -21,7 +21,7 @@ public class HomeController {
     public String getHome(Model model) throws IOException {
         List<Advert> adverts = motoRepository.findAll();
         model.addAttribute("adverts",adverts);
-        model.addAttribute("file",photoService.returnImage());
+        model.addAttribute("file", photoService);
         return "home";
     }
 }
