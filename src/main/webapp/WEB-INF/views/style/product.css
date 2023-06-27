@@ -25,11 +25,6 @@ main {
     margin-bottom: 20px;
 }
 
-img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-}
 
 h2 {
     margin: 10px 0;
@@ -51,7 +46,6 @@ footer {
     justify-content: center;
 }
 .photo :first-child{
-    border: grey 1px solid;
-    width: 50%;
-    height:auto;
+    border: grey 3px solid;
+
 }
