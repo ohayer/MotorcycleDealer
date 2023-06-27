@@ -9,17 +9,20 @@
 </head>
 <body>
 <div class="main-horiz">
-    <h1 style="padding-top: 15px;text-align: center; color: #cad2e0; font-size: 45px">MOTO-DEALER</h1>
-    <div style="display: flex; justify-content: space-between; color: #cad2e0;">
+    <h1 style="padding-top: 15px;text-align: center; color: #dde2eb; font-size: 45px">MOTO-DEALER</h1>
+    <div style="display: flex; justify-content: space-between; color: #dde2eb;">
         <h3 style="text-align: right; padding-left: 40px">We are working with passions to motorcycles</h3>
         <h3 style=" text-align: right;padding-right: 40px; ">Found that what you are looking for</h3>
     </div>
 </div>
 <img style="display: flex;
+    margin: -10px;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: auto;" src="/shops.jpg">
+  width: 100.87%;
+  height: auto;
+/*padding-left: 10px*/"
+     src="/shops.jpg">
 
 <div class="container">
     <c:forEach items="${adverts}" var="advert">

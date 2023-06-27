@@ -1,10 +1,11 @@
 
 .main-horiz {
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: -10px;
-    background-color: #656769;
-    height: 150px;
+    height: 120px;
+    width: 800px;
+    margin-left: 600px;
+    background-color: #333;
+    position: fixed;
+    /*z-index: 999;*/
 }
 .item a {
     display: block;

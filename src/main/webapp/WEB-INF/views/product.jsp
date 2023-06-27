@@ -32,9 +32,9 @@
         <p>ABS: ${advert.abs ? 'TAK' : 'NIE'}</p>
     </div>
 </main>
-<h2>Opis dodatkowy: </h2>
-<h4>${advert.description}</h4>
-<div class="photo">
+<h2 style="padding-left: 100px">Opis dodatkowy: </h2>
+<h4 style="padding-left: 100px">${advert.description}</h4>
+<div  class="photo">
     <c:forEach items="${file.getPhotosById(advert.id)}" var="photo">
         <img src="${file.returnImage(photo.getName())}" alt="${photo}">
     </c:forEach>
